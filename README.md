@@ -1,11 +1,9 @@
-ROLO
-=======
---------
-
-Project Page: [http://guanghan.info/projects/ROLO/](http://guanghan.info/projects/ROLO/)
+# ROLO
+This ROLO code, I forked from https://github.com/Guanghan/ROLO  
+(1) I combined the YOLO and LSTM together, let ROLO can run directly not two step. *yoro.py*  
+(2) It must need TensorFlow 0.9, because the RNN change a lot in TensorFlow higher than 1.0 !!!
 
 ## Overview
-
 ROLO is short for Recurrent YOLO [[1]], aimed at simultaneous object detection and tracking. 
 
 With the regression capability of LSTMs both spatially and temporally, ROLO is able to interpret a series of high-level visual features directly into coordinates of tracked objects. By concatenating high-level visual features with YOLO detection results, ROLO is spatially supervised into specific targets. 
@@ -19,13 +17,8 @@ to regress the features into the location of a certain visual elements/cues. The
 
 ROLO is currently an offline approach, and is expected to gain a performance boost with proper online model updating. It is still a single object tracker, and data association techniques are not yet explored for the simultaneous tracking of multiple targets.
 
-----
-## Prerequisites
-- Python 2.7 or Python 3.3+
-- Tensorflow
-- Scipy
+Project Page: [http://guanghan.info/projects/ROLO/](http://guanghan.info/projects/ROLO/)
 
-----
 ## Getting Started
 
 ### 1. Download Data and Pre-trained Models
@@ -198,13 +191,6 @@ More Qualitative results can be found in the project page.  Quantitative results
 - Green: ROLO Tracking
 - Red: Ground Truth
 
-
----
-## License
-
-ROLO is released under the Apache License Version 2.0 (refer to the LICENSE file for details).
-
----
 ## Citation
 The details are published as a technical report on arXiv. If you use the code and models, please cite the following paper:
 [arXiv:1607.05781](http://arxiv.org/abs/1607.05781).
@@ -217,7 +203,7 @@ The details are published as a technical report on arXiv. If you use the code an
 	}
 
 
----
+
 ## Reference
 [[1]] Redmon, Joseph, et al. "You only look once: Unified, real-time object detection." CVPR (2016).
 
