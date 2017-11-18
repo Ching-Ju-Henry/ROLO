@@ -1,7 +1,12 @@
 # ROLO
 This ROLO code, I forked from https://github.com/Guanghan/ROLO  
-(1) I combined the YOLO and LSTM together, let ROLO can run directly not two step. *yoro.py*  
-(2) It must need TensorFlow 0.9, because the RNN change a lot in TensorFlow higher than 1.0 !!!
+I put my code, data and output in the **Combined** file  
+1. I combined the YOLO and LSTM together, let ROLO can run directly not two step. *yoro.py*  
+After running *yoro.py* can get the **yolo_out** and **rolo_out_test**
+2. After (1), running *demp.py* or *ROLO_demo_test.py*, you can get output in outfile. 
+3. LSTM parameter: I use model_demo.ckpt
+4. YOLO parameter: YOLO_small.ckpt (https://github.com/Ching-Ju-Henry/YOLO_tensorflow)
+### It must need TensorFlow 0.9, because the RNN change a lot in TensorFlow higher than 1.0 !!!
 
 ## Overview
 ROLO is short for Recurrent YOLO [[1]], aimed at simultaneous object detection and tracking. 
@@ -152,8 +157,6 @@ python ./experiments/testing/ROLO_step6_train_30_exp2.py
 python ./experiments/testing/ROLO_step9_train_30_exp2.py
 ```
 
-![](http://guanghan.info/projects/ROLO/fps_over_steps.png)
-![](http://guanghan.info/projects/ROLO/IOU_over_steps.png)
 
 ### 4. Visualization with Heatmap 
 
@@ -190,25 +193,3 @@ More Qualitative results can be found in the project page.  Quantitative results
 - Blue: YOLO detection
 - Green: ROLO Tracking
 - Red: Ground Truth
-
-## Citation
-The details are published as a technical report on arXiv. If you use the code and models, please cite the following paper:
-[arXiv:1607.05781](http://arxiv.org/abs/1607.05781).
-
-	@article{ning2016spatially,
-	  title={Spatially Supervised Recurrent Convolutional Neural Networks for Visual Object Tracking},
-	  author={Ning, Guanghan and Zhang, Zhi and Huang, Chen and He, Zhihai and Ren, Xiaobo and Wang, Haohong},
-	  journal={arXiv preprint arXiv:1607.05781},
-	  year={2016}
-	}
-
-
-
-## Reference
-[[1]] Redmon, Joseph, et al. "You only look once: Unified, real-time object detection." CVPR (2016).
-
-[1]: http://arxiv.org/pdf/1506.02640.pdf "YOLO"
-
-[[2]] Wu, Yi, Jongwoo Lim, and Ming-Hsuan Yang. "Object tracking benchmark." IEEE Transactions on Pattern Analysis and Machine Intelligence 37.9 (2015): 1834-1848.
-
-[2]: http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=7001050&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D7001050 "OTB100"
