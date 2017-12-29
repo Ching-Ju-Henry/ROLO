@@ -6,7 +6,7 @@ After running *yoro.py* can get the **yolo_out** and **rolo_out_test**
 2. After (1), running *demp.py* or *ROLO_demo_test.py*, you can get output in outfile. 
 3. LSTM parameter: I use model_demo.ckpt
 4. YOLO parameter: YOLO_small.ckpt (https://github.com/Ching-Ju-Henry/YOLO_tensorflow)
-### It must need TensorFlow 0.9, because the RNN change a lot in TensorFlow higher than 1.0 !!!
+### It must need TensorFlow 0.12, because the RNN change a lot in TensorFlow higher than 1.0 !!!
 
 ## Overview
 ROLO is short for Recurrent YOLO [[1]], aimed at simultaneous object detection and tracking. 
